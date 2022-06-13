@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/DataPersist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="数据持久化" />
+
+    <Button
+        android:id="@+id/RequestPermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="权限获取"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/DataPersist" />
+
+    <Button
+        android:id="@+id/ContentProvider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ContentProvider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/RequestPermission" />
+
+    <Button
+        android:id="@+id/ServiceTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Service Test"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ContentProvider" />
+
+    <Button
+        android:id="@+id/ThreadTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thread Test"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ServiceTest" />
+
+    <Button
+        android:id="@+id/ActivityLifecycleTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity Lifecycle Test"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ThreadTest" />
+
+    <Button
+        android:id="@+id/LruCacheTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LruCache Test"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ActivityLifecycleTest" />
+
+    <Button
+        android:id="@+id/CallBackTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CallBack Test"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/LruCacheTest" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".thread.ThreadActivity">
+
+    <Button
+        android:id="@+id/Thread_sole_tickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="两个Thread窗口同时各自卖票100张"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/Runnable_sole_tickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="两个Runnable窗口同时各自卖票100张"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Thread_sole_tickets" />
+
+    <Button
+        android:id="@+id/Runnable_both_sole_tickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="两个Runnable窗口同时卖票100张"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Runnable_sole_tickets" />
+
+    <Button
+        android:id="@+id/AsyncTaskTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AsyncTask开始加载"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Runnable_both_sole_tickets" />
+
+    <TextView
+        android:id="@+id/AsyncTaskLoadingState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="还未加载!"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AsyncTaskTest" />
+
+    <ProgressBar
+        android:id="@+id/AsyncTaskLoadingProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="0"
+        android:max="100"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AsyncTaskLoadingState" />
+
+    <Button
+        android:id="@+id/AsyncTaskCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AsyncTask结束加载"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AsyncTaskLoadingProgress" />
+
+    <TextView
+        android:id="@+id/HandlerTestState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AsyncTaskCancel" />
+
+    <Button
+        android:id="@+id/HandlerTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HandlerTest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/HandlerTestState" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
