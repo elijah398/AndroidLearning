@@ -1,10 +1,7 @@
 package com.elijah.androidlearning.thread
 
-import android.os.AsyncTask
+import android.os.*
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.os.Handler
-import android.os.Message
 import android.util.Log
 import android.view.View
 import com.elijah.androidlearning.R
@@ -22,7 +19,9 @@ class ThreadActivity : AppCompatActivity() {
             R.id.Runnable_both_sole_tickets -> runnableBothSellTickets()
             R.id.AsyncTaskTest -> asyncTaskTest()
             R.id.AsyncTaskCancel -> asyncTaskCancel()
-            R.id.HandlerTest -> handlerTest()
+            R.id.UIHandlerTest -> uIHandlerTest()
+            R.id.WorkHandlerTest -> workThreadHandlerTest()
+            R.id.ThreadPoolTest -> threadPoolTest()
         }
     }
 
@@ -34,8 +33,16 @@ class ThreadActivity : AppCompatActivity() {
         findViewById<View>(R.id.Runnable_both_sole_tickets).setOnClickListener(listener)
         findViewById<View>(R.id.AsyncTaskTest).setOnClickListener(listener)
         findViewById<View>(R.id.AsyncTaskCancel).setOnClickListener(listener)
-        findViewById<View>(R.id.HandlerTest).setOnClickListener(listener)
+        findViewById<View>(R.id.UIHandlerTest).setOnClickListener(listener)
+        findViewById<View>(R.id.WorkHandlerTest).setOnClickListener(listener)
+        findViewById<View>(R.id.ThreadPoolTest).setOnClickListener(listener)
     }
+
+    private fun threadPoolTest() {
+        val task = MyRunnable()
+        ThreadPool.execute(task)
+    }
+
 
     private fun threadSellTickets() {
         val mt1 = MyThread("Thread窗口1")
@@ -74,12 +81,15 @@ class ThreadActivity : AppCompatActivity() {
         mTask.cancel(true)
     }
 
-    private fun handlerTest() {
-        val mHandler = MyHandler(this)
+    private fun uIHandlerTest() {
+        val myLooper = Looper.myLooper()
+        val mUIHandler = MyUIHandler(this, Looper.getMainLooper())
+
+        Log.d("DYJDebug", "CurrentThread is ${Thread.currentThread()}, Mylooper is $myLooper")
 
         Thread {
             try {
-                Thread.sleep(3000)
+                Thread.sleep(2000)
             } catch (e: InterruptedException) {
                 e.printStackTrace()
             }
@@ -89,7 +99,7 @@ class ThreadActivity : AppCompatActivity() {
                 obj = "A"
             }
 
-            mHandler.sendMessage(msg)
+            mUIHandler.sendMessage(msg)
         }.start()
 
         Thread {
@@ -104,42 +114,34 @@ class ThreadActivity : AppCompatActivity() {
                 obj = "B"
             }
 
-            mHandler.sendMessage(msg)
+            mUIHandler.sendMessage(msg)
         }.start()
     }
 
-    private class MyThread(name: String) : Thread(name) {
-        private var ticket = 100
+    private fun workThreadHandlerTest() {
+        Thread {
+            Looper.prepare()
+            val myLooper = Looper.myLooper()
+            Log.d("DYJDebug", "CurrentThread is ${Thread.currentThread()}, Mylooper is $myLooper")
 
-        override fun run() {
-            super.run()
-            while (ticket > 0) {
-                ticket--
-                Log.d("DYJDebug", "$name, 卖掉了1张票，剩余票数为：$ticket")
+            val mWorkHandler = MyWorkHandler(myLooper!!)
+
+            Thread {
+                Log.d("DYJDebug", "CurrentThread is ${Thread.currentThread()}")
                 try {
-                    sleep(1000)
+                    Thread.sleep(3000)
                 } catch (e: InterruptedException) {
                     e.printStackTrace()
                 }
-            }
-        }
-    }
 
-    private class MyRunnable: Runnable {
-        private var ticket = 100
+                val msg = Message.obtain().apply {
+                    what = 1
+                    obj = "work complete"
+                }
 
-        override fun run() {
-            while (ticket > 0) {
-                ticket--
-                Log.d("DYJDebug", "${Thread.currentThread().name}, 卖掉了1张票，剩余票数为：$ticket")
-            }
-
-            try {
-                Thread.sleep(1000)
-            } catch (e: InterruptedException) {
-                e.printStackTrace()
-            }
-        }
+                mWorkHandler.sendMessage(msg)
+            }.start()
+        }.start()
     }
 
     /*
@@ -186,17 +188,28 @@ class ThreadActivity : AppCompatActivity() {
                 activityReference.get()?.AsyncTaskLoadingProgress?.setProgress(0)
             }
         }
-    }
 
-    class MyHandler internal constructor(context: ThreadActivity): Handler() {
+        class MyUIHandler internal constructor(context: ThreadActivity, looper: Looper): Handler(looper) {
 
-        private val activityReference: WeakReference<ThreadActivity> = WeakReference(context)
+            private val activityReference: WeakReference<ThreadActivity> = WeakReference(context)
 
-        override fun handleMessage(msg: Message) {
-            super.handleMessage(msg)
-            when(msg.what) {
-                1 -> activityReference.get()?.HandlerTestState?.text = "执行了线程1的UI操作"
-                2 -> activityReference.get()?.HandlerTestState?.text = "执行了线程2的UI操作"
+            override fun handleMessage(msg: Message) {
+                super.handleMessage(msg)
+                when(msg.what) {
+                    1 -> activityReference.get()?.HandlerTestState?.text = "执行了线程1的UI操作"
+                    2 -> activityReference.get()?.HandlerTestState?.text = "执行了线程2的UI操作"
+                }
+            }
+        }
+
+        class MyWorkHandler internal constructor(looper: Looper): Handler(looper) {
+
+            override fun handleMessage(msg: Message) {
+                super.handleMessage(msg)
+                Log.d("DYJDebug", "Handler msg")
+                when(msg.what) {
+                    1 -> Log.d("DYJDebug", "WorkThread received the msg ${msg.obj}")
+                }
             }
         }
     }

@@ -52,4 +52,5 @@ class LifeCycleActivity : AppCompatActivity() {
         super.onRestart()
         Log.d("DYJDebug", "onRestart")
     }
+
 }

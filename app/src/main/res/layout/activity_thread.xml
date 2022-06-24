@@ -81,13 +81,30 @@
         app:layout_constraintTop_toBottomOf="@id/AsyncTaskCancel" />
 
     <Button
-        android:id="@+id/HandlerTest"
+        android:id="@+id/UIHandlerTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HandlerTest"
+        android:text="UI Handler Test"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/HandlerTestState" />
 
+    <Button
+        android:id="@+id/WorkHandlerTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Work Handler Test"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/UIHandlerTest" />
+
+    <Button
+        android:id="@+id/ThreadPoolTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ThreadPool Test"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/WorkHandlerTest" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

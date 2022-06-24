@@ -11,6 +11,7 @@ class MyService : Service() {
     private val mBinder = DownloadBinder()
 
     override fun onBind(intent: Intent): IBinder {
+        Log.d("DYJDebug", "MyService onBind")
         return mBinder
     }
 
@@ -33,6 +34,11 @@ class MyService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Log.d("DYJDebug", "MyService onStartCommand")
         return super.onStartCommand(intent, flags, startId)
+    }
+
+    override fun onUnbind(intent: Intent?): Boolean {
+        Log.d("DYJDebug", "MyService onUnbind")
+        return super.onUnbind(intent)
     }
 
     override fun onDestroy() {
