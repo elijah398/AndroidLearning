@@ -22,6 +22,7 @@ class ThreadActivity : AppCompatActivity() {
             R.id.UIHandlerTest -> uIHandlerTest()
             R.id.WorkHandlerTest -> workThreadHandlerTest()
             R.id.ThreadPoolTest -> threadPoolTest()
+            R.id.CoroutineTest -> coroutineTest()
         }
     }
 
@@ -36,6 +37,13 @@ class ThreadActivity : AppCompatActivity() {
         findViewById<View>(R.id.UIHandlerTest).setOnClickListener(listener)
         findViewById<View>(R.id.WorkHandlerTest).setOnClickListener(listener)
         findViewById<View>(R.id.ThreadPoolTest).setOnClickListener(listener)
+        findViewById<View>(R.id.CoroutineTest).setOnClickListener(listener)
+    }
+
+    private fun coroutineTest() {
+        val ct = CoroutineTest(this)
+        ct.showUserInfoByLaunch()
+        //ct.showUserInfoByAsync()
     }
 
     private fun threadPoolTest() {
