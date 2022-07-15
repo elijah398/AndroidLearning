@@ -11,6 +11,7 @@ import com.elijah.androidlearning.callback.CallBackActivity
 import com.elijah.androidlearning.datapersist.DataPersistActivity
 import com.elijah.androidlearning.lrucache.LruCacheActivity
 import com.elijah.androidlearning.requestpermission.RequestPermissionActivity
+import com.elijah.androidlearning.retrofit.GetRequestActivity
 import com.elijah.androidlearning.service.ServiceActivity
 import com.elijah.androidlearning.thread.ThreadActivity
 
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             R.id.ActivityLifecycleTest -> startActivity(Intent(this@MainActivity, LifeCycleActivity::class.java))
             R.id.LruCacheTest -> startActivity(Intent(this@MainActivity, LruCacheActivity::class.java))
             R.id.CallBackTest -> startActivity(Intent(this@MainActivity, CallBackActivity::class.java))
-            R.id.BroadcastTest -> startActivity(Intent(this@MainActivity, BroadcastActivity::class.java))
+            R.id.RetrofitTest -> startActivity(Intent(this@MainActivity, GetRequestActivity::class.java))
         }
     }
 
@@ -42,5 +43,6 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.LruCacheTest).setOnClickListener(listener)
         findViewById<View>(R.id.CallBackTest).setOnClickListener(listener)
         findViewById<View>(R.id.BroadcastTest).setOnClickListener(listener)
+        findViewById<View>(R.id.RetrofitTest).setOnClickListener(listener)
     }
 }

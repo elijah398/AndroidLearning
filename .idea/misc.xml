@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/layout/activity_content_provider.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_data_persist.xml" value="0.1566265060240964" />
         <entry key="app/src/main/res/layout/activity_dialog.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/layout/activity_get_request.xml" value="0.3671875" />
         <entry key="app/src/main/res/layout/activity_life_cycle.xml" value="0.20677083333333332" />
         <entry key="app/src/main/res/layout/activity_lru_cache.xml" value="0.23072916666666668" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />

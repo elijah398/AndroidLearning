@@ -1,6 +1,7 @@
 package com.elijah.androidlearning.activitylifecycle
 
 import android.content.Intent
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -15,6 +16,10 @@ class LifeCycleActivity : AppCompatActivity() {
         }
     }
 
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        Log.d("DYJDebug", "onConfigurationChanged, Voiding Activity Restart")
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d("DYJDebug", "onCreate")
@@ -22,6 +27,7 @@ class LifeCycleActivity : AppCompatActivity() {
         findViewById<View>(R.id.StartNormalActivity).setOnClickListener(listener)
         findViewById<View>(R.id.StartDialogActivity).setOnClickListener(listener)
     }
+
 
     override fun onStart() {
         super.onStart()
