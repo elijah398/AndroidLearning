@@ -95,4 +95,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/BroadcastTest" />
 
+
+    <Button
+        android:id="@+id/LeakTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leak Test"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/RetrofitTest" />
+
+    <Button
+        android:id="@+id/XmlParser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xml Parser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/LeakTest" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

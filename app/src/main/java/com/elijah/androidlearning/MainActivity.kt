@@ -9,11 +9,13 @@ import com.elijah.androidlearning.broadcast.BroadcastActivity
 import com.elijah.androidlearning.callback.CallBackActivity
 //import com.elijah.androidlearning.contentprovider.ContentProviderActivity
 import com.elijah.androidlearning.datapersist.DataPersistActivity
+import com.elijah.androidlearning.leakTest.LeakTestActivity
 import com.elijah.androidlearning.lrucache.LruCacheActivity
 import com.elijah.androidlearning.requestpermission.RequestPermissionActivity
 import com.elijah.androidlearning.retrofit.GetRequestActivity
 import com.elijah.androidlearning.service.ServiceActivity
 import com.elijah.androidlearning.thread.ThreadActivity
+import com.elijah.androidlearning.xmlparser.XMLParserActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,6 +30,8 @@ class MainActivity : AppCompatActivity() {
             R.id.LruCacheTest -> startActivity(Intent(this@MainActivity, LruCacheActivity::class.java))
             R.id.CallBackTest -> startActivity(Intent(this@MainActivity, CallBackActivity::class.java))
             R.id.RetrofitTest -> startActivity(Intent(this@MainActivity, GetRequestActivity::class.java))
+            R.id.LeakTest -> startActivity(Intent(this@MainActivity, LeakTestActivity::class.java))
+            R.id.XmlParser -> startActivity(Intent(this@MainActivity, XMLParserActivity::class.java))
         }
     }
 
@@ -44,5 +48,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.CallBackTest).setOnClickListener(listener)
         findViewById<View>(R.id.BroadcastTest).setOnClickListener(listener)
         findViewById<View>(R.id.RetrofitTest).setOnClickListener(listener)
+        findViewById<View>(R.id.LeakTest).setOnClickListener(listener)
+        findViewById<View>(R.id.XmlParser).setOnClickListener(listener)
     }
 }
