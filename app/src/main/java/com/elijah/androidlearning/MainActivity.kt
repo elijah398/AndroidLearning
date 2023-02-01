@@ -5,10 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.elijah.androidlearning.activitylifecycle.LifeCycleActivity
-import com.elijah.androidlearning.broadcast.BroadcastActivity
 import com.elijah.androidlearning.callback.CallBackActivity
 //import com.elijah.androidlearning.contentprovider.ContentProviderActivity
 import com.elijah.androidlearning.datapersist.DataPersistActivity
+import com.elijah.androidlearning.encrypttool.EncryptActivity
 import com.elijah.androidlearning.leakTest.LeakTestActivity
 import com.elijah.androidlearning.lrucache.LruCacheActivity
 import com.elijah.androidlearning.requestpermission.RequestPermissionActivity
@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
             R.id.RetrofitTest -> startActivity(Intent(this@MainActivity, GetRequestActivity::class.java))
             R.id.LeakTest -> startActivity(Intent(this@MainActivity, LeakTestActivity::class.java))
             R.id.XmlParser -> startActivity(Intent(this@MainActivity, XMLParserActivity::class.java))
+            R.id.encrypt -> startActivity(Intent(this@MainActivity, EncryptActivity::class.java))
         }
     }
 
@@ -50,5 +51,6 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.RetrofitTest).setOnClickListener(listener)
         findViewById<View>(R.id.LeakTest).setOnClickListener(listener)
         findViewById<View>(R.id.XmlParser).setOnClickListener(listener)
+        findViewById<View>(R.id.encrypt).setOnClickListener(listener)
     }
 }

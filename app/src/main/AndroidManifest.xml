@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLearning">
         <activity
+            android:name=".encrypttool.EncryptActivity"
+            android:exported="false" />
+        <activity
             android:name=".xmlparser.XMLParserActivity"
             android:exported="false" />
         <activity
@@ -54,11 +57,9 @@
         <service
             android:name=".service.MyService"
             android:enabled="true"
-            android:exported="true" />
-
-<!--        <activity-->
-<!--            android:name=".contentprovider.ContentProviderActivity"-->
-<!--            android:exported="true" />-->
+            android:exported="true" /> <!-- <activity -->
+        <!-- android:name=".contentprovider.ContentProviderActivity" -->
+        <!-- android:exported="true" /> -->
         <activity
             android:name=".requestpermission.RequestPermissionActivity"
             android:exported="true" />

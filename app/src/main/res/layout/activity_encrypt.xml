@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".encrypttool.EncryptActivity">
+
+    <EditText
+        android:id="@+id/editData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type something here"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/encrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encrypt Data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editData" />
+
+    <TextView
+        android:id="@+id/decryptDataText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data is: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/encrypt" />
+
+    <Button
+        android:id="@+id/decrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decrypt Data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/decryptDataText" />
+
+    <Button
+        android:id="@+id/keyStoreEncrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KeyStore Encrypt Data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/decrypt" />
+
+    <Button
+        android:id="@+id/keyStoreDecrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KeyStore Decrypt Data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/keyStoreEncrypt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
