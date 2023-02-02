@@ -10,8 +10,8 @@
         android:id="@+id/DataPersist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:text="数据持久化" />
 
     <Button
@@ -19,17 +19,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="权限获取"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/DataPersist" />
+        app:layout_constraintLeft_toRightOf="@id/DataPersist" />
 
     <Button
         android:id="@+id/ContentProvider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ContentProvider"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/RequestPermission" />
 
     <Button
@@ -37,17 +33,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Service Test"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ContentProvider" />
+        app:layout_constraintTop_toBottomOf="@id/RequestPermission"
+        app:layout_constraintLeft_toRightOf="@id/ContentProvider"  />
 
     <Button
         android:id="@+id/ThreadTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Thread Test"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ServiceTest" />
 
     <Button
@@ -55,17 +48,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Activity Lifecycle Test"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ThreadTest" />
+        app:layout_constraintTop_toBottomOf="@id/ServiceTest"
+        app:layout_constraintLeft_toRightOf="@id/ThreadTest"  />
 
     <Button
         android:id="@+id/LruCacheTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LruCache Test"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ActivityLifecycleTest" />
 
     <Button
@@ -73,17 +63,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CallBack Test"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/LruCacheTest" />
+        app:layout_constraintTop_toBottomOf="@id/ActivityLifecycleTest"
+        app:layout_constraintLeft_toRightOf="@id/LruCacheTest"  />
 
     <Button
         android:id="@+id/BroadcastTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Broadcast Test"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/CallBackTest" />
 
     <Button
@@ -91,9 +78,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Retrofit Test"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/BroadcastTest" />
+        app:layout_constraintTop_toBottomOf="@id/CallBackTest"
+        app:layout_constraintLeft_toRightOf="@id/BroadcastTest"  />
 
 
     <Button
@@ -101,8 +87,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Leak Test"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/RetrofitTest" />
 
     <Button
@@ -110,17 +94,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Xml Parser"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/LeakTest" />
-
+        app:layout_constraintTop_toBottomOf="@id/RetrofitTest"
+        app:layout_constraintLeft_toRightOf="@id/LeakTest"  />
     <Button
         android:id="@+id/encrypt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Encrypt Test"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/XmlParser" />
+        app:layout_constraintTop_toBottomOf="@id/RetrofitTest"
+        app:layout_constraintLeft_toRightOf="@id/XmlParser"  />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
