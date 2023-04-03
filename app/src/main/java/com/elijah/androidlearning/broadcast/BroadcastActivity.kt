@@ -20,36 +20,36 @@ import com.elijah.androidlearning.thread.ThreadActivity
 
 class BroadcastActivity : AppCompatActivity() {
 
-    private lateinit var timeChangeReceiver: TimeChangeReceiver
+    private lateinit var airPlaneChangeReceiver: AirPlaneChangeReceiver
 
     private val listener =  View.OnClickListener { v ->
         when (v.id) {
-            R.id.registerTimeChangeListener -> registerTimeChangeListener()
+            R.id.registerAirPlaneChangeListener -> registerAirPlaneChangeListener()
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_broadcast)
-        findViewById<View>(R.id.registerTimeChangeListener).setOnClickListener(listener)
+        findViewById<View>(R.id.registerAirPlaneChangeListener).setOnClickListener(listener)
     }
 
-    private fun registerTimeChangeListener() {
+    private fun registerAirPlaneChangeListener() {
         val intentFilter = IntentFilter()
-        intentFilter.addAction("android.intent.action.TIME_TICK")
-        timeChangeReceiver = TimeChangeReceiver()
-        Log.d("DYJDebug", "timeChangeReceiver has registered")
-        registerReceiver(timeChangeReceiver, intentFilter)
+        intentFilter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED)
+        airPlaneChangeReceiver = AirPlaneChangeReceiver()
+        Log.d("DYJDebug", "AirPlane Mode listener has registered")
+        registerReceiver(airPlaneChangeReceiver, intentFilter)
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        unregisterReceiver(timeChangeReceiver)
+        unregisterReceiver(airPlaneChangeReceiver)
     }
 
-    inner class TimeChangeReceiver : BroadcastReceiver() {
+    inner class AirPlaneChangeReceiver : BroadcastReceiver() {
         override fun onReceive(p0: Context?, p1: Intent?) {
-            Toast.makeText(p0, "Time has Changed", Toast.LENGTH_SHORT).show()
+            Toast.makeText(p0, "AirPlane Mode has changed", Toast.LENGTH_SHORT).show()
         }
     }
 }

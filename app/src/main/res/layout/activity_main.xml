@@ -81,7 +81,6 @@
         app:layout_constraintTop_toBottomOf="@id/CallBackTest"
         app:layout_constraintLeft_toRightOf="@id/BroadcastTest"  />
 
-
     <Button
         android:id="@+id/LeakTest"
         android:layout_width="wrap_content"
@@ -96,6 +95,7 @@
         android:text="Xml Parser"
         app:layout_constraintTop_toBottomOf="@id/RetrofitTest"
         app:layout_constraintLeft_toRightOf="@id/LeakTest"  />
+
     <Button
         android:id="@+id/encrypt"
         android:layout_width="wrap_content"
@@ -103,5 +103,12 @@
         android:text="Encrypt Test"
         app:layout_constraintTop_toBottomOf="@id/RetrofitTest"
         app:layout_constraintLeft_toRightOf="@id/XmlParser"  />
+
+    <Button
+        android:id="@+id/annotationTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Annotation"
+        app:layout_constraintTop_toBottomOf="@id/encrypt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

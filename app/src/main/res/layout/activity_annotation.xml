@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".broadcast.BroadcastActivity">
+    tools:context=".annotation.AnnotationActivity">
 
     <Button
-        android:id="@+id/registerAirPlaneChangeListener"
+        android:id="@+id/annotation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="接受飞行模式开关变化广播" />
+        android:text="通过注解点击" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

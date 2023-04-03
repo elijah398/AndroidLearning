@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.elijah.androidlearning.activitylifecycle.LifeCycleActivity
+import com.elijah.androidlearning.annotation.AnnotationActivity
 import com.elijah.androidlearning.broadcast.BroadcastActivity
 import com.elijah.androidlearning.callback.CallBackActivity
 //import com.elijah.androidlearning.contentprovider.ContentProviderActivity
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
             R.id.LeakTest -> startActivity(Intent(this@MainActivity, LeakTestActivity::class.java))
             R.id.XmlParser -> startActivity(Intent(this@MainActivity, XMLParserActivity::class.java))
             R.id.encrypt -> startActivity(Intent(this@MainActivity, EncryptActivity::class.java))
+            R.id.annotationTest -> startActivity(Intent(this@MainActivity, AnnotationActivity::class.java))
         }
     }
 
@@ -54,5 +56,6 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.LeakTest).setOnClickListener(listener)
         findViewById<View>(R.id.XmlParser).setOnClickListener(listener)
         findViewById<View>(R.id.encrypt).setOnClickListener(listener)
+        findViewById<View>(R.id.annotationTest).setOnClickListener(listener)
     }
 }

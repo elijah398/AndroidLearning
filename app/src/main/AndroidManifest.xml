@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLearning">
         <activity
+            android:name=".annotation.AnnotationActivity"
+            android:exported="false" />
+        <activity
             android:name=".encrypttool.EncryptActivity"
             android:exported="false" />
         <activity
