@@ -13,6 +13,7 @@ import com.elijah.androidlearning.datapersist.DataPersistActivity
 import com.elijah.androidlearning.encrypttool.EncryptActivity
 import com.elijah.androidlearning.leakTest.LeakTestActivity
 import com.elijah.androidlearning.lrucache.LruCacheActivity
+import com.elijah.androidlearning.okhttp.OkhttpActivity
 import com.elijah.androidlearning.requestpermission.RequestPermissionActivity
 import com.elijah.androidlearning.retrofit.GetRequestActivity
 import com.elijah.androidlearning.service.ServiceActivity
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
             R.id.XmlParser -> startActivity(Intent(this@MainActivity, XMLParserActivity::class.java))
             R.id.encrypt -> startActivity(Intent(this@MainActivity, EncryptActivity::class.java))
             R.id.annotationTest -> startActivity(Intent(this@MainActivity, AnnotationActivity::class.java))
+            R.id.okhttpTest -> startActivity(Intent(this@MainActivity, OkhttpActivity::class.java))
         }
     }
 
@@ -57,5 +59,6 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.XmlParser).setOnClickListener(listener)
         findViewById<View>(R.id.encrypt).setOnClickListener(listener)
         findViewById<View>(R.id.annotationTest).setOnClickListener(listener)
+        findViewById<View>(R.id.okhttpTest).setOnClickListener(listener)
     }
 }

@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLearning">
         <activity
+            android:name=".okhttp.OkhttpActivity"
+            android:exported="false" />
+        <activity
             android:name=".annotation.AnnotationActivity"
             android:exported="false" />
         <activity
