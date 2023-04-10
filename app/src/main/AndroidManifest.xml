@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLearning">
         <activity
+            android:name=".uri.UriActivity"
+            android:exported="false" />
+        <activity
             android:name=".okhttp.OkhttpActivity"
             android:exported="false" />
         <activity

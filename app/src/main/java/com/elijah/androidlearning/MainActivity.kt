@@ -18,6 +18,7 @@ import com.elijah.androidlearning.requestpermission.RequestPermissionActivity
 import com.elijah.androidlearning.retrofit.GetRequestActivity
 import com.elijah.androidlearning.service.ServiceActivity
 import com.elijah.androidlearning.thread.ThreadActivity
+import com.elijah.androidlearning.uri.UriActivity
 import com.elijah.androidlearning.xmlparser.XMLParserActivity
 
 class MainActivity : AppCompatActivity() {
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity() {
             R.id.encrypt -> startActivity(Intent(this@MainActivity, EncryptActivity::class.java))
             R.id.annotationTest -> startActivity(Intent(this@MainActivity, AnnotationActivity::class.java))
             R.id.okhttpTest -> startActivity(Intent(this@MainActivity, OkhttpActivity::class.java))
+            R.id.uriTest -> startActivity(Intent(this@MainActivity, UriActivity::class.java))
         }
     }
 
@@ -60,5 +62,6 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.encrypt).setOnClickListener(listener)
         findViewById<View>(R.id.annotationTest).setOnClickListener(listener)
         findViewById<View>(R.id.okhttpTest).setOnClickListener(listener)
+        findViewById<View>(R.id.uriTest).setOnClickListener(listener)
     }
 }

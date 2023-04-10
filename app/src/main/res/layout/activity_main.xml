@@ -119,4 +119,12 @@
         app:layout_constraintTop_toBottomOf="@id/encrypt"
         app:layout_constraintLeft_toRightOf="@id/annotationTest"/>
 
+    <Button
+        android:id="@+id/uriTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UriTest"
+        app:layout_constraintTop_toBottomOf="@id/encrypt"
+        app:layout_constraintLeft_toRightOf="@id/okhttpTest"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
