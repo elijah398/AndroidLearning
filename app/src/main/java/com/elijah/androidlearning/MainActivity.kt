@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.elijah.androidlearning.activitylifecycle.LifeCycleActivity
 import com.elijah.androidlearning.annotation.AnnotationActivity
+import com.elijah.androidlearning.architecture.ArchitectureActivity
 import com.elijah.androidlearning.broadcast.BroadcastActivity
 import com.elijah.androidlearning.callback.CallBackActivity
 //import com.elijah.androidlearning.contentprovider.ContentProviderActivity
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
             R.id.annotationTest -> startActivity(Intent(this@MainActivity, AnnotationActivity::class.java))
             R.id.okhttpTest -> startActivity(Intent(this@MainActivity, OkhttpActivity::class.java))
             R.id.uriTest -> startActivity(Intent(this@MainActivity, UriActivity::class.java))
+            R.id.architectureTest -> startActivity(Intent(this@MainActivity, ArchitectureActivity::class.java))
         }
     }
 
@@ -63,5 +65,6 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.annotationTest).setOnClickListener(listener)
         findViewById<View>(R.id.okhttpTest).setOnClickListener(listener)
         findViewById<View>(R.id.uriTest).setOnClickListener(listener)
+        findViewById<View>(R.id.architectureTest).setOnClickListener(listener)
     }
 }

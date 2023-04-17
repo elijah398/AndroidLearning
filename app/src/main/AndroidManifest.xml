@@ -16,6 +16,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLearning">
         <activity
+            android:name=".architecture.mvvm.view.MvvmLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".architecture.mvp.view.MvpLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".architecture.ArchitectureActivity"
+            android:exported="false" />
+        <activity
+            android:name=".architecture.mvc.controller.MvcLoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".uri.UriActivity"
             android:exported="false" />
         <activity

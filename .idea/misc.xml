@@ -5,6 +5,7 @@
       <map>
         <entry key="../../Library/Android/sdk/platforms/android-33/data/res/layout/simple_list_item_1.xml" value="0.2640625" />
         <entry key="app/src/main/res/layout/activity_annotation.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_architecture.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_broadcast.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_call_back.xml" value="0.20520833333333333" />
         <entry key="app/src/main/res/layout/activity_content_provider.xml" value="0.1" />
@@ -14,10 +15,14 @@
         <entry key="app/src/main/res/layout/activity_life_cycle.xml" value="0.20677083333333332" />
         <entry key="app/src/main/res/layout/activity_lru_cache.xml" value="0.23072916666666668" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_mvc_login.xml" value="0.221875" />
+        <entry key="app/src/main/res/layout/activity_mvp_login.xml" value="0.221875" />
+        <entry key="app/src/main/res/layout/activity_mvvm_login.xml" value="0.18645833333333334" />
         <entry key="app/src/main/res/layout/activity_normal.xml" value="0.20677083333333332" />
         <entry key="app/src/main/res/layout/activity_request_permission.xml" value="0.36822916666666666" />
         <entry key="app/src/main/res/layout/activity_service.xml" value="0.1111111111111111" />
         <entry key="app/src/main/res/layout/activity_thread.xml" value="0.10107014997885928" />
+        <entry key="app/src/main/res/layout/include_login_view.xml" value="0.221875" />
       </map>
     </option>
   </component>

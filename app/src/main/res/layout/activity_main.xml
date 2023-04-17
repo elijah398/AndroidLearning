@@ -127,4 +127,11 @@
         app:layout_constraintTop_toBottomOf="@id/encrypt"
         app:layout_constraintLeft_toRightOf="@id/okhttpTest"/>
 
+    <Button
+        android:id="@+id/architectureTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Architecture"
+        app:layout_constraintTop_toBottomOf="@id/uriTest" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
