@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.elijah.androidlearning.activitylifecycle.LifeCycleActivity
+import com.elijah.androidlearning.aidl.AidlActivity
 import com.elijah.androidlearning.annotation.AnnotationActivity
 import com.elijah.androidlearning.architecture.ArchitectureActivity
 import com.elijah.androidlearning.broadcast.BroadcastActivity
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity() {
             R.id.okhttpTest -> startActivity(Intent(this@MainActivity, OkhttpActivity::class.java))
             R.id.uriTest -> startActivity(Intent(this@MainActivity, UriActivity::class.java))
             R.id.architectureTest -> startActivity(Intent(this@MainActivity, ArchitectureActivity::class.java))
+            R.id.aidlTest -> startActivity(Intent(this@MainActivity, AidlActivity::class.java))
         }
     }
 
@@ -66,5 +68,6 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.okhttpTest).setOnClickListener(listener)
         findViewById<View>(R.id.uriTest).setOnClickListener(listener)
         findViewById<View>(R.id.architectureTest).setOnClickListener(listener)
+        findViewById<View>(R.id.aidlTest).setOnClickListener(listener)
     }
 }

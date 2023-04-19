@@ -18,6 +18,7 @@
         android:id="@+id/RequestPermission"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:text="权限获取"
         app:layout_constraintLeft_toRightOf="@id/DataPersist" />
 
@@ -32,7 +33,8 @@
         android:id="@+id/ServiceTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Service Test"
+        android:layout_marginLeft="10dp"
+        android:text="Service"
         app:layout_constraintTop_toBottomOf="@id/RequestPermission"
         app:layout_constraintLeft_toRightOf="@id/ContentProvider"  />
 
@@ -40,14 +42,15 @@
         android:id="@+id/ThreadTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thread Test"
+        android:text="Thread"
         app:layout_constraintTop_toBottomOf="@id/ServiceTest" />
 
     <Button
         android:id="@+id/ActivityLifecycleTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Activity Lifecycle Test"
+        android:layout_marginLeft="10dp"
+        android:text="Activity Lifecycle"
         app:layout_constraintTop_toBottomOf="@id/ServiceTest"
         app:layout_constraintLeft_toRightOf="@id/ThreadTest"  />
 
@@ -55,14 +58,15 @@
         android:id="@+id/LruCacheTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LruCache Test"
+        android:text="LruCache"
         app:layout_constraintTop_toBottomOf="@id/ActivityLifecycleTest" />
 
     <Button
         android:id="@+id/CallBackTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CallBack Test"
+        android:layout_marginLeft="10dp"
+        android:text="CallBack"
         app:layout_constraintTop_toBottomOf="@id/ActivityLifecycleTest"
         app:layout_constraintLeft_toRightOf="@id/LruCacheTest"  />
 
@@ -70,14 +74,15 @@
         android:id="@+id/BroadcastTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Broadcast Test"
+        android:text="Broadcast"
         app:layout_constraintTop_toBottomOf="@id/CallBackTest" />
 
     <Button
         android:id="@+id/RetrofitTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Retrofit Test"
+        android:layout_marginLeft="10dp"
+        android:text="Retrofit"
         app:layout_constraintTop_toBottomOf="@id/CallBackTest"
         app:layout_constraintLeft_toRightOf="@id/BroadcastTest"  />
 
@@ -85,14 +90,15 @@
         android:id="@+id/LeakTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Leak Test"
+        android:text="Leak"
         app:layout_constraintTop_toBottomOf="@id/RetrofitTest" />
 
     <Button
         android:id="@+id/XmlParser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Xml Parser"
+        android:layout_marginLeft="10dp"
+        android:text="XML Parser"
         app:layout_constraintTop_toBottomOf="@id/RetrofitTest"
         app:layout_constraintLeft_toRightOf="@id/LeakTest"  />
 
@@ -100,7 +106,8 @@
         android:id="@+id/encrypt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Encrypt Test"
+        android:layout_marginLeft="10dp"
+        android:text="Encrypt"
         app:layout_constraintTop_toBottomOf="@id/RetrofitTest"
         app:layout_constraintLeft_toRightOf="@id/XmlParser"  />
 
@@ -115,7 +122,8 @@
         android:id="@+id/okhttpTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="OkhttpTest"
+        android:layout_marginLeft="10dp"
+        android:text="Okhttp"
         app:layout_constraintTop_toBottomOf="@id/encrypt"
         app:layout_constraintLeft_toRightOf="@id/annotationTest"/>
 
@@ -123,7 +131,8 @@
         android:id="@+id/uriTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="UriTest"
+        android:layout_marginLeft="10dp"
+        android:text="Uri"
         app:layout_constraintTop_toBottomOf="@id/encrypt"
         app:layout_constraintLeft_toRightOf="@id/okhttpTest"/>
 
@@ -133,5 +142,14 @@
         android:layout_height="wrap_content"
         android:text="Architecture"
         app:layout_constraintTop_toBottomOf="@id/uriTest" />
+
+    <Button
+        android:id="@+id/aidlTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="AIDL"
+        app:layout_constraintTop_toBottomOf="@id/uriTest"
+        app:layout_constraintLeft_toRightOf="@id/architectureTest"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,11 +10,21 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/gui1"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/gui1"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLearning">
+        <activity
+            android:name=".aidl.AidlActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".aidl.PersonService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote"></service>
+
         <activity
             android:name=".architecture.mvvm.view.MvvmLoginActivity"
             android:exported="false" />
