@@ -97,6 +97,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/createDatabase" />
 
+    <TextView
+        android:id="@+id/dataPath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data Path"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addData" />
+
+    <Button
+        android:id="@+id/printPath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Print Data Path"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dataPath" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

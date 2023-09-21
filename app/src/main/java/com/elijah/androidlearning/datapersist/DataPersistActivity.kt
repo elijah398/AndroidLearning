@@ -5,7 +5,9 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import com.elijah.androidlearning.R
 import kotlinx.android.synthetic.main.activity_data_persist.*
@@ -21,6 +23,7 @@ class DataPersistActivity : AppCompatActivity() {
             R.id.loadFromSP -> loadFormSP()
             R.id.createDatabase -> createDatabase()
             //R.id.addData -> addDataToDB()
+            R.id.printPath -> printDataPath()
         }
     }
 
@@ -33,6 +36,7 @@ class DataPersistActivity : AppCompatActivity() {
         findViewById<View>(R.id.loadFromSP).setOnClickListener(listener)
         findViewById<View>(R.id.createDatabase).setOnClickListener(listener)
         findViewById<View>(R.id.addData).setOnClickListener(listener)
+        findViewById<View>(R.id.printPath).setOnClickListener(listener)
     }
 
     override fun onDestroy() {
@@ -101,6 +105,21 @@ class DataPersistActivity : AppCompatActivity() {
 //    private fun adaddDataToDB() {
 //        val db = dbH
 //    }
+
+    private fun printDataPath() {
+        val filesDir = applicationContext.filesDir.path
+        val cacheDir = applicationContext.cacheDir.path
+        val externalFilesDir = applicationContext.getExternalFilesDir(null)?.path
+        val externalCacheDir = applicationContext.externalCacheDir?.path
+        val dataPath: TextView = findViewById<TextView>(R.id.dataPath)
+        val logMsg = "filesDir is $filesDir \n" +
+                "cacheDir is $cacheDir \n" +
+                "externalFilesDir is $externalFilesDir \n" +
+                "externalCacheDir is $externalCacheDir"
+        dataPath.text = logMsg
+        Log.d("DYJ", logMsg)
+
+    }
 
     class MyDatabaseHelper(private val context: Context, name: String, version: Int) :
         SQLiteOpenHelper(context, name, null, version) {
