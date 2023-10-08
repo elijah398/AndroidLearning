@@ -13,6 +13,7 @@ import com.elijah.androidlearning.callback.CallBackActivity
 //import com.elijah.androidlearning.contentprovider.ContentProviderActivity
 import com.elijah.androidlearning.datapersist.DataPersistActivity
 import com.elijah.androidlearning.encrypttool.EncryptActivity
+import com.elijah.androidlearning.jetpack.JetPackActivity
 import com.elijah.androidlearning.leakTest.LeakTestActivity
 import com.elijah.androidlearning.lrucache.LruCacheActivity
 import com.elijah.androidlearning.okhttp.OkhttpActivity
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
             R.id.uriTest -> startActivity(Intent(this@MainActivity, UriActivity::class.java))
             R.id.architectureTest -> startActivity(Intent(this@MainActivity, ArchitectureActivity::class.java))
             R.id.aidlTest -> startActivity(Intent(this@MainActivity, AidlActivity::class.java))
+            R.id.jetpack -> startActivity(Intent(this@MainActivity, JetPackActivity::class.java))
         }
     }
 
@@ -69,5 +71,6 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.uriTest).setOnClickListener(listener)
         findViewById<View>(R.id.architectureTest).setOnClickListener(listener)
         findViewById<View>(R.id.aidlTest).setOnClickListener(listener)
+        findViewById<View>(R.id.jetpack).setOnClickListener(listener)
     }
 }

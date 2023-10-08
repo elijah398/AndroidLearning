@@ -16,6 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLearning">
         <activity
+            android:name=".jetpack.livedata.LiveDataTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".jetpack.lifecycle.LifeCycleTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".jetpack.JetPackActivity"
+            android:exported="false" />
+        <activity
             android:name=".aidl.AidlActivity"
             android:exported="false" />
 
@@ -23,7 +32,7 @@
             android:name=".aidl.PersonService"
             android:enabled="true"
             android:exported="true"
-            android:process=":remote"></service>
+            android:process=":remote" />
 
         <activity
             android:name=".architecture.mvvm.view.MvvmLoginActivity"
